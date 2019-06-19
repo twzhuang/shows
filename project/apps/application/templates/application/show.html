@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>TV Show {{show.id}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 class='d-inline-block'>TV Show {{show.id}}</h1>
+        <a href="/shows" class='d-inline-block'>Go Back</a>
+        <p>Title: {{show.title}}</p>
+        <p>Network: {{show.network}}</p>
+        <p>Release Date: {{show.release_date|date:'Y-m-d'}}</p>
+        <p>Description: {{show.description}}</p>
+        <p>Last Updated: {{show.updated_at}}</p>
+        <a href='/shows/edit/{{show.id}}'>Edit</a> |
+        <a href='/shows/destroy/{{show.id}}'>Delete</a>
+    </body>
+</html>
